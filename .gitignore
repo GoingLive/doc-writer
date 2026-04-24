@@ -6,8 +6,8 @@ venv/
 .env
 
 # Generated output
-resources/output/
-!resources/output/.gitkeep
+resources/output/*
+!resources/output/*.gitkeep
 
 # Private tenant files
 resources/tenants/*/private/
