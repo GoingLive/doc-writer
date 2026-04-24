@@ -1,0 +1,49 @@
+﻿template_type: standard_letter_A4
+
+short_tags:
+  adr: recipient_address
+  date: location_date
+  subj: subject
+  sub: subtitle
+  sal: salutation
+  body: body
+  close: closing_salutation
+  sign: sender_closing
+  attach: references_attachments
+
+roles:
+  recipient_address:
+    css_class: dw-recipient-address
+    word_style: dw.recipient_address
+
+  location_date:
+    css_class: dw-location-date
+    word_style: dw.location_date
+
+  subject:
+    css_class: dw-subject
+    word_style: dw.subject
+
+  subtitle:
+    css_class: dw-subtitle
+    word_style: dw.subtitle
+
+  salutation:
+    css_class: dw-salutation
+    word_style: dw.salutation
+
+  body:
+    css_class: dw-body
+    word_style: dw.body
+
+  closing_salutation:
+    css_class: dw-closing-salutation
+    word_style: dw.closing_salutation
+
+  sender_closing:
+    css_class: dw-sender-closing
+    word_style: dw.sender_closing
+
+  references_attachments:
+    css_class: dw-references-attachments
+    word_style: dw.references_attachments
