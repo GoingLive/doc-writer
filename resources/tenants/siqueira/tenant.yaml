@@ -1,0 +1,17 @@
+﻿tenant_id: siqueira
+display_name: Siqueira International AG
+default_language: en
+default_country: CH
+default_template_type: standard_letter_A4
+default_rendering_mode: draft
+
+assets:
+  logo_big: assets/logo_big.png
+  logo_small: assets/logo_small.png
+  signature: assets/signature_roland.png
+
+styles:
+  standard_letter_A4: styles/standard_letter_A4.css
+
+mappings:
+  standard_letter_A4: mappings/standard_letter_A4.yaml
