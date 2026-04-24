@@ -1,5 +1,4 @@
 ﻿<?php
-declare(strict_types=1);
 
 function run_check(string $cmd): string
 {
