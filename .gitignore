@@ -4,6 +4,7 @@ __pycache__/
 .venv/
 venv/
 .env
+-private
 
 # Generated output
 resources/output/*
@@ -25,3 +26,7 @@ Thumbs.db
 *.tmp
 *.bak
 ~$*
+
+# Private local files
+private/
+web/*/signature*.png
