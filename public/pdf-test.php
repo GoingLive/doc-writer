@@ -1,7 +1,13 @@
 ﻿<?php
 
-$pdfFile = __DIR__ . '/../resources/output/test.pdf';
-$htmlFile = __DIR__ . '/../resources/output/test.html';
+$outputDir = __DIR__ . '/resources/output';
+
+if (!is_dir($outputDir)) {
+    mkdir($outputDir, 0775, true);
+}
+
+$pdfFile = $outputDir . '/test.pdf';
+$htmlFile = $outputDir . '/test.html';
 
 $html = '<!doctype html>
 <html>
@@ -22,8 +28,11 @@ $html = '<!doctype html>
 
 file_put_contents($htmlFile, $html);
 
+$htmlUrl = 'file://' . $htmlFile;
+
 $cmd = '/usr/local/bin/wkhtmltopdf '
-    . escapeshellarg($htmlFile)
+    . '--enable-local-file-access '
+    . escapeshellarg($htmlUrl)
     . ' '
     . escapeshellarg($pdfFile)
     . ' 2>&1';
@@ -45,7 +54,7 @@ $output = shell_exec($cmd);
     <h2>Result</h2>
     <?php if (file_exists($pdfFile)): ?>
         <p>PDF created.</p>
-        <p><a href="../resources/output/test.pdf">Download test.pdf</a></p>
+        <p><a href="resources/output/test.pdf">Download test.pdf</a></p>
     <?php else: ?>
         <p>PDF was not created.</p>
     <?php endif; ?>
